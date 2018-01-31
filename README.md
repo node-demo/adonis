@@ -34,9 +34,33 @@ adonis new blog
 
 or manually clone the repo and then run `npm install`.
 
+### Mysql Schema
+> mysql config path --> blog/.env <br>
+mysql config path --> blog/config/database.js
+```bash
+# database/migrations/1503248427885_user.js
+# database/migrations/1503248427886_token.js
+
+adonis migration:run
+```
+```bash
+# Desktop\blog>adonis migration:run
+# bash Output:
+
+migrate: 1503248427885_user.js
+migrate: 1503248427886_token.js
+Database migrated successfully in 341 ms
+```
 
 ### Start Server
 
 ```bash
 adonis serve --dev
 ```
+
+### Test
+add test data
+> http://localhost:3333/add
+
+show test data
+> http://localhost:3333/

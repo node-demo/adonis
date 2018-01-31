@@ -12,7 +12,22 @@
 | http://adonisjs.com/docs/4.0/routing
 |
 */
+const Database = use('Database');
 
-const Route = use('Route')
+const Route = use('Route');
 
-Route.on('/').render('index')
+// Route.on('/').render('index');
+
+Route.get('/add',async  () =>{
+  const sqlObj = {
+    username: 'username003',
+    email: 'email003@qq.com',
+    password: 'password003'
+  };
+
+  await use('Database').table('users').insert( sqlObj );
+});
+
+Route.get('/',async  () =>{
+  return await Database.table('users').select('*');
+});
