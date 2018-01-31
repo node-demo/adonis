@@ -1,7 +1,6 @@
 'use strict';
 
 const Database = use('Database');
-
 const Route = use('Route');
 
 // Demo1
@@ -25,7 +24,7 @@ Route.get('/add',async  () =>{
     password: 'password001'
   };
 
-  await use('Database').table('users').insert( sqlObj );
+  await Database.table('users').insert( sqlObj );
 });
 
 // Demo5
