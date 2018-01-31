@@ -12,7 +12,7 @@ Route.get('/query',async  cxt =>{
 });
 
 // Demo3 app\Controllers\Http\HomeController.js
-Route.get('/control','HomeController.render');
+Route.get('/home','HomeController.render');
 
 /*------------------------Extend----------------------*/
 

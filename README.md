@@ -67,10 +67,7 @@ Desktop\blog>adonis make:controller home
 ? Select controller type For HTTP requests
 √ create  app\Controllers\Http\HomeController.js
 ```
-> Demo1 http://localhost:3333/ <br>
-> Demo2 http://localhost:3333/query?name=saturn <br>
-> Demo3 http://localhost:3333/control?id=123
-
+> Demo3 http://localhost:3333/home?id=123
 
 ### Extend
 add data
