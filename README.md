@@ -58,7 +58,18 @@ Database migrated successfully in 341 ms
 adonis serve --dev
 ```
 
-### Test
+### Demo
+```bash
+Desktop\blog>adonis make:view home
+√ create  resources\views\home.edge
+
+Desktop\blog>adonis make:controller home
+? Select controller type For HTTP requests
+√ create  app\Controllers\Http\HomeController.js
+```
+
+
+### Extend
 add test data
 > http://localhost:3333/add
 
@@ -66,4 +77,3 @@ show test data
 > http://localhost:3333/
 
 ![img](pic1.png)
-![img](pic2.png)

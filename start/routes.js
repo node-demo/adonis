@@ -1,35 +1,34 @@
-'use strict'
-
-/*
-|--------------------------------------------------------------------------
-| Routes
-|--------------------------------------------------------------------------
-|
-| Http routes are entry points to your web application. You can create
-| routes for different URL's and bind Controller actions to them.
-|
-| A complete guide on routing is available here.
-| http://adonisjs.com/docs/4.0/routing
-|
-*/
-
+'use strict';
 
 const Database = use('Database');
 
 const Route = use('Route');
 
-// Route.on('/').render('index');
+// Demo1
+Route.on('/').render('welcome');
 
+// Demo2
+Route.get('/query',async  cxt =>{
+  return `hello ${cxt.request.input('name')}`;
+});
+
+// Demo3 app\Controllers\Http\HomeController.js
+Route.get('/control','HomeController.render');
+
+/*------------------------Extend----------------------*/
+
+// Demo4
 Route.get('/add',async  () =>{
   const sqlObj = {
-    username: 'username003',
-    email: 'email003@qq.com',
-    password: 'password003'
+    username: 'username001',
+    email: 'email001@qq.com',
+    password: 'password001'
   };
 
   await use('Database').table('users').insert( sqlObj );
 });
 
-Route.get('/',async  () =>{
+// Demo5
+Route.get('/list',async  () =>{
   return await Database.table('users').select('*');
 });
