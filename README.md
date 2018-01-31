@@ -64,3 +64,6 @@ add test data
 
 show test data
 > http://localhost:3333/
+
+![img](pic1.png)
+![img](pic2.png)
